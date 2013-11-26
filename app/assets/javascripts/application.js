@@ -85,11 +85,6 @@ $(document).on('page:fetch', function() {
 
 $(document).on('page:change', function() {
 	newHTML = $(".content").html()
-	if (mobile){
-		$(".nav_"+(window.location.href.split("/")[window.location.href.split("/").length-1].length > 0 ? window.location.href.split("/")[window.location.href.split("/").length-1] : "home")).append("&nbsp;&nbsp;<img class='loading' height='10' src='/assets/loading.gif' />")
-	} else {
-		$(".nav_"+(window.location.href.split("/")[window.location.href.split("/").length-1].length > 0 ? window.location.href.split("/")[window.location.href.split("/").length-1] : "home")).parent().append("<img class='loading' height='10' src='/assets/loading.gif' />")
-	}
 	if (mobile && mobileNavShown) {
 		$("nav ul").show()
 		$("nav ul").hide("blind", {direction: "vertical"}, 300)
